@@ -1,0 +1,33 @@
+{
+  "handler": "Microsoft.Solutions.Application",
+  "version": "1.0",
+  "parameters": {
+    "basics": [
+      {
+        "name": "appName",
+        "type": "Microsoft.Common.TextBox",
+        "label": "App Name",
+        "toolTip": "Name for the application",
+        "defaultValue": "myApp"
+      },
+      {
+        "name": "enableFirewall",
+        "type": "Microsoft.Common.CheckBox",
+        "label": "Enable Firewall",
+        "defaultValue": false
+      },
+      {
+        "name": "tier",
+        "type": "Microsoft.Common.DropDown",
+        "label": "Select Tier",
+        "defaultValue": "Standard",
+        "constraints": {
+          "allowedValues": [
+            { "label": "Standard", "value": "Standard" },
+            { "label": "Premium", "value": "Premium" }
+          ]
+        }
+      }
+    ]
+  }
+}
